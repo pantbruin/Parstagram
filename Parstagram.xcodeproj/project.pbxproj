@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		08A0616826056A0700A69D41 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A0616726056A0700A69D41 /* LoginViewController.swift */; };
 		08A0616D26056A1100A69D41 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A0616C26056A1100A69D41 /* FeedViewController.swift */; };
+		08A06172260571E500A69D41 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A06171260571E500A69D41 /* CameraViewController.swift */; };
 		08B2774926056541007BCAFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2774826056541007BCAFB /* AppDelegate.swift */; };
 		08B2774B26056541007BCAFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2774A26056541007BCAFB /* SceneDelegate.swift */; };
 		08B2775026056541007BCAFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B2774E26056541007BCAFB /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		02841FD759997DA13B0459BD /* Pods_ParstagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParstagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08A0616726056A0700A69D41 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08A0616C26056A1100A69D41 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		08A06171260571E500A69D41 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		08B2774526056541007BCAFB /* Parstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B2774826056541007BCAFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B2774A26056541007BCAFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				08B2775626056542007BCAFB /* Info.plist */,
 				08A0616726056A0700A69D41 /* LoginViewController.swift */,
 				08A0616C26056A1100A69D41 /* FeedViewController.swift */,
+				08A06171260571E500A69D41 /* CameraViewController.swift */,
 			);
 			path = Parstagram;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08A0616826056A0700A69D41 /* LoginViewController.swift in Sources */,
+				08A06172260571E500A69D41 /* CameraViewController.swift in Sources */,
 				08B2774926056541007BCAFB /* AppDelegate.swift in Sources */,
 				08A0616D26056A1100A69D41 /* FeedViewController.swift in Sources */,
 				08B2774B26056541007BCAFB /* SceneDelegate.swift in Sources */,
