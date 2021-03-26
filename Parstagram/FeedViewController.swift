@@ -66,6 +66,35 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+    
+    // Everytime a user taps on a picture, this function is called
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Choose the post to add the comment to. Recall that posts is a PFObject
+        let post = posts[indexPath.section]
+        
+        // Create the table in Parse
+        let comment = PFObject(className: "Comments")
+        // Text attribute for a comment
+        comment["text"] = "This is a random comment"
+        // post attribute contains the pointer to the picture
+        comment["post"] = post
+        // Author attribute tells you who wrote the post
+        comment["author"] = PFUser.current()!
+        
+        // This is made up. Every post 'should' have an arry called comments and we should add this comment to the array
+        // This essentially adds a new column called comments that contains all the comments for that post
+        post.add(comment, forKey: "comments")
+        
+        // After we added the comment we save the post in Parse
+        post.saveInBackground { (success, error) in
+            if success {
+                print("Comment saved")
+            } else {
+                print("Error saving comment")
+            }
+        }
+        
+    }
 
     /*
     // MARK: - Navigation
