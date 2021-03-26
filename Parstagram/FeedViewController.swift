@@ -76,5 +76,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func onLogoutButton(_ sender: Any) {
+        
+        // Clear the logged in user from the Parse cache..i.e. tell Parse that the user should no longer be logged in
+        PFUser.logOut()
+        
+        // Switch the user back to the login screen
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+        
+        let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+        
+        delegate.window?.rootViewController = loginViewController
+        
+    }
+    
 
 }
