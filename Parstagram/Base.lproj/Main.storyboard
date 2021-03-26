@@ -106,35 +106,72 @@
                                                         <constraint firstAttribute="width" secondItem="hEc-9i-DPE" secondAttribute="height" multiplier="199:220" id="UIg-mO-8ZU"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Jesse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk9-2V-NnH">
-                                                    <rect key="frame" x="28" y="456" width="45" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is my comment!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8i-Ip-cVh">
+                                                    <rect key="frame" x="71.5" y="456" width="162" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Here is my comment!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8i-Ip-cVh">
-                                                    <rect key="frame" x="81" y="456" width="162" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jesse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk9-2V-NnH">
+                                                    <rect key="frame" x="16" y="456" width="47.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Dk9-2V-NnH" firstAttribute="top" secondItem="hEc-9i-DPE" secondAttribute="bottom" constant="8" id="2iu-h6-iX9"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Dk9-2V-NnH" secondAttribute="bottom" constant="8" id="36X-oH-0rW"/>
                                                 <constraint firstItem="hEc-9i-DPE" firstAttribute="top" secondItem="Egy-rj-nbi" secondAttribute="top" constant="8" id="3IC-y2-hbw"/>
                                                 <constraint firstAttribute="trailing" secondItem="hEc-9i-DPE" secondAttribute="trailing" constant="8" id="3Vx-jG-p1N"/>
-                                                <constraint firstAttribute="trailing" secondItem="Y8i-Ip-cVh" secondAttribute="trailing" constant="8" id="706-fO-WvL"/>
                                                 <constraint firstItem="hEc-9i-DPE" firstAttribute="leading" secondItem="Egy-rj-nbi" secondAttribute="leading" constant="8" id="7Hp-WZ-MAe"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Y8i-Ip-cVh" secondAttribute="bottom" constant="8" id="8yS-cm-E3u"/>
-                                                <constraint firstItem="Dk9-2V-NnH" firstAttribute="leading" secondItem="Egy-rj-nbi" secondAttribute="leadingMargin" constant="8" id="aXg-Yr-r9D"/>
-                                                <constraint firstItem="Dk9-2V-NnH" firstAttribute="top" secondItem="hEc-9i-DPE" secondAttribute="bottom" constant="8" id="hzU-fT-4dk"/>
-                                                <constraint firstItem="Y8i-Ip-cVh" firstAttribute="top" secondItem="hEc-9i-DPE" secondAttribute="bottom" constant="8" id="m3H-c1-4YH"/>
-                                                <constraint firstItem="Y8i-Ip-cVh" firstAttribute="leading" secondItem="Dk9-2V-NnH" secondAttribute="trailing" constant="8" id="rPv-uL-ZHe"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Y8i-Ip-cVh" secondAttribute="trailing" constant="8" id="MEr-pD-1Xf"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Y8i-Ip-cVh" secondAttribute="bottom" constant="8" id="O0i-5M-wxb"/>
+                                                <constraint firstItem="Dk9-2V-NnH" firstAttribute="leading" secondItem="Egy-rj-nbi" secondAttribute="leading" constant="16" id="Y4p-6y-328"/>
+                                                <constraint firstItem="Y8i-Ip-cVh" firstAttribute="leading" secondItem="Dk9-2V-NnH" secondAttribute="trailing" constant="8" id="bn1-R1-Xcz"/>
+                                                <constraint firstItem="Y8i-Ip-cVh" firstAttribute="top" secondItem="hEc-9i-DPE" secondAttribute="bottom" constant="8" id="xry-7Q-343"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="captionLabel" destination="Y8i-Ip-cVh" id="BO9-RX-fLK"/>
                                             <outlet property="photoView" destination="hEc-9i-DPE" id="23c-nI-p3U"/>
                                             <outlet property="usernameLabel" destination="Dk9-2V-NnH" id="wex-1x-6oi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="0hD-ap-A27" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="513" width="414" height="37.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0hD-ap-A27" id="Svk-I1-8l9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="37.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jesse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvK-HD-7Ia">
+                                                    <rect key="frame" x="16" y="8" width="47.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYh-QX-Ibb">
+                                                    <rect key="frame" x="71.5" y="8" width="138.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jYh-QX-Ibb" secondAttribute="bottom" constant="8" id="3m8-dz-6gW"/>
+                                                <constraint firstItem="jYh-QX-Ibb" firstAttribute="leading" secondItem="KvK-HD-7Ia" secondAttribute="trailing" constant="8" id="59N-Tc-Fnp"/>
+                                                <constraint firstItem="KvK-HD-7Ia" firstAttribute="leading" secondItem="Svk-I1-8l9" secondAttribute="leading" constant="16" id="6dd-gp-rAU"/>
+                                                <constraint firstItem="jYh-QX-Ibb" firstAttribute="leading" secondItem="KvK-HD-7Ia" secondAttribute="trailing" constant="8" id="S0T-5Q-GaL"/>
+                                                <constraint firstItem="jYh-QX-Ibb" firstAttribute="top" secondItem="Svk-I1-8l9" secondAttribute="top" constant="8" id="jWQ-hy-hjg"/>
+                                                <constraint firstItem="KvK-HD-7Ia" firstAttribute="top" secondItem="Svk-I1-8l9" secondAttribute="top" constant="8" id="oDP-Ed-voX"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jYh-QX-Ibb" secondAttribute="trailing" constant="8" id="qBE-OI-ibM"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KvK-HD-7Ia" secondAttribute="bottom" constant="8" id="yBn-aQ-5Re"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="jYh-QX-Ibb" id="S4N-IE-V2E"/>
+                                            <outlet property="nameLabel" destination="KvK-HD-7Ia" id="7w0-fx-II2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

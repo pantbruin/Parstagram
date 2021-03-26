@@ -31,7 +31,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         // Query the parse database
         let query = PFQuery(className:"Posts")
-        query.includeKey("author")
+        query.includeKeys(["author", "comments", "comments.author"])
         query.limit = 20
         
         query.findObjectsInBackground { (posts, error) in
@@ -44,27 +44,57 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        // Because we can have any number of comments within posts, we need to correctly determine how many rows should be returned
+        let post = posts[section]
+        // Double ?? lets us set default values in the event that the thing on the left is nil. So in this case it will be an empty array if there are no comments
+        let comments = (post["comments"] as? [PFObject]) ?? []
+        
+        // +1 because a post will always contain one picture
+        return comments.count + 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        let post = posts[indexPath.section]
+        let comments = (post["comments"] as? [PFObject]) ?? []
 
-        let post = posts[indexPath.row]
-        // Save the username
-        let user = post["author"] as! PFUser
-        cell.usernameLabel.text = user.username
+        // We need to create different cell types for comments and the actual post. We know that posts though is always the 0th row. Everything else, if any, will be comments
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+
+            // Save the username
+            let user = post["author"] as! PFUser
+            cell.usernameLabel.text = user.username
+            
+            cell.captionLabel.text = post["caption"] as! String
+            
+            let imageFile = post["image"] as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            cell.photoView.af_setImage(withURL: url)
+            
+            return cell
+        } else {
+            // Otherwise the cell to return should be a comment cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
+            
+            // row - 1 because the 0th comment is when indexPath.row is equal to 1 because 0 was the post
+            let comment = comments[indexPath.row - 1]
+            cell.commentLabel.text = comment["text"] as? String
+            
+            let user = comment["author"] as! PFUser
+            cell.nameLabel.text = user.username
+            
+            return cell
+        }
         
-        cell.captionLabel.text = post["caption"] as! String
         
-        let imageFile = post["image"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
-        
-        cell.photoView.af_setImage(withURL: url)
-        
-        return cell
     }
     
     // Everytime a user taps on a picture, this function is called
