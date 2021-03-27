@@ -15,20 +15,25 @@ The following **required** functionality is completed:
 
 The following **bonus** features are implemented:
 
-- [ ] User can add a profile picture. (2pts)
+- [x] User can add a profile picture. (2pts)
 - [ ] Profile pictures are shown for posts and comments. (2pts)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-User stays logged in across restarts and user can log out.
+User stays logged in across restarts and user can log out:
 <br/>
 <img src='http://g.recordit.co/btd3ib2pMg.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-User can view comments on a post and add new comments.
+User can view comments on a post and add new comments:
 <br/>
 <img src='http://g.recordit.co/S7l4NypkhB.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+User can add a profile picture:
+<br/>
+<img src='http://g.recordit.co/tu2NzyGI6A.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 
 
