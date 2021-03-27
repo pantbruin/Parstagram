@@ -23,10 +23,10 @@ The following **bonus** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 User stays logged in across restarts and user can log out.
-<img src='http://g.recordit.co/btd3ib2pMg.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/btd3ib2pMg.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 User can view comments on a post and add new comments.
-<img src='http://g.recordit.co/uhZQRaTxcd.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/S7l4NypkhB.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 
