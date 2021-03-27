@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		089F413D260E9F9C00EC2EBA /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089F413C260E9F9C00EC2EBA /* CommentCell.swift */; };
+		089F414E260EC7FE00EC2EBA /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089F414D260EC7FE00EC2EBA /* UserProfileViewController.swift */; };
 		08A0616826056A0700A69D41 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A0616726056A0700A69D41 /* LoginViewController.swift */; };
 		08A0616D26056A1100A69D41 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A0616C26056A1100A69D41 /* FeedViewController.swift */; };
 		08A06172260571E500A69D41 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A06171260571E500A69D41 /* CameraViewController.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		02841FD759997DA13B0459BD /* Pods_ParstagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParstagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		089F413C260E9F9C00EC2EBA /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		089F414D260EC7FE00EC2EBA /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		08A0616726056A0700A69D41 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08A0616C26056A1100A69D41 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		08A06171260571E500A69D41 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				08A06171260571E500A69D41 /* CameraViewController.swift */,
 				08E0F0E82605B2FD0018658F /* PostCell.swift */,
 				089F413C260E9F9C00EC2EBA /* CommentCell.swift */,
+				089F414D260EC7FE00EC2EBA /* UserProfileViewController.swift */,
 			);
 			path = Parstagram;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08A0616826056A0700A69D41 /* LoginViewController.swift in Sources */,
+				089F414E260EC7FE00EC2EBA /* UserProfileViewController.swift in Sources */,
 				08A06172260571E500A69D41 /* CameraViewController.swift in Sources */,
 				08B2774926056541007BCAFB /* AppDelegate.swift in Sources */,
 				08A0616D26056A1100A69D41 /* FeedViewController.swift in Sources */,

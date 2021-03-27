@@ -73,14 +73,14 @@
                     <connections>
                         <outlet property="passwordField" destination="u4Q-tf-78U" id="UaL-xU-6SG"/>
                         <outlet property="usernameField" destination="wXg-UV-vEm" id="Crb-Zp-Eeh"/>
-                        <segue destination="WnG-uZ-Waj" kind="presentation" identifier="loginSegue" id="wlv-AM-9cW"/>
+                        <segue destination="PVi-kr-E3n" kind="presentation" identifier="loginSegue" id="adk-IL-oIn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
+            <point key="canvasLocation" x="964" y="-1568"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--Instagram-->
         <scene sceneID="vqM-by-CLD">
             <objects>
                 <viewController id="xuR-SC-gqK" customClass="FeedViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -202,7 +202,7 @@
                         <viewLayoutGuide key="safeArea" id="hLP-Kj-VtE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8xC-tK-VGJ">
+                    <navigationItem key="navigationItem" title="Instagram" id="8xC-tK-VGJ">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="L1j-Kv-ftK">
                             <connections>
                                 <action selector="onLogoutButton:" destination="xuR-SC-gqK" id="Vg3-Ij-EBs"/>
@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eiX-UO-HF5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873.913043478261" y="77.678571428571431"/>
+            <point key="canvasLocation" x="242" y="810"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="x5h-O3-Qd9">
@@ -270,12 +270,31 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2744.9275362318845" y="75"/>
+            <point key="canvasLocation" x="241" y="1560"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dOP-dQ-rEb">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" modalPresentationStyle="fullScreen" id="PVi-kr-E3n" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yzd-PW-91I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WnG-uZ-Waj" kind="relationship" relationship="viewControllers" id="DJz-il-hSd"/>
+                        <segue destination="QeN-Ui-Akf" kind="relationship" relationship="viewControllers" id="Twa-y2-qne"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K0P-EF-iZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="-771"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w09-W9-YS7">
             <objects>
                 <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="WnG-uZ-Waj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="feed_tab" id="TSh-mI-Wdg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DpK-Yu-02g">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -288,13 +307,91 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eID-Q3-MzK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="963.76811594202911" y="77.678571428571431"/>
+            <point key="canvasLocation" x="242" y="46"/>
+        </scene>
+        <!--My Profile-->
+        <scene sceneID="amm-Gf-plE">
+            <objects>
+                <viewController id="xCr-Wh-bj3" customClass="UserProfileViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vym-y5-F1V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="uxe-mt-9qt">
+                                <rect key="frame" x="107" y="137" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3rl-ae-BVC" appends="YES" id="UjY-l0-ERc"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yct-Hh-Qsd">
+                                <rect key="frame" x="57" y="404" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxC-GB-3Ll">
+                                <rect key="frame" x="113" y="354" width="184" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit New Profile Picture"/>
+                                <connections>
+                                    <action selector="onChangeProfilePicture:" destination="xCr-Wh-bj3" eventType="touchUpInside" id="9wq-iX-yrY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="userName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b8-0J-ePP">
+                                <rect key="frame" x="159" y="404" width="235" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aKM-IT-san"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Profile" id="C6t-Jh-4sK"/>
+                    <connections>
+                        <outlet property="profilePicture" destination="uxe-mt-9qt" id="Jei-18-kWm"/>
+                        <outlet property="userNameField" destination="5b8-0J-ePP" id="3Sj-S6-vfe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzr-aY-bmW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3rl-ae-BVC">
+                    <connections>
+                        <action selector="onCameraButton:" destination="xCr-Wh-bj3" id="B9f-rv-sYJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1808.6956521739132" y="781.47321428571422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2fE-bF-az6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QeN-Ui-Akf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="profile_tab" id="4qt-4w-Li7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vUg-LM-EoH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xCr-Wh-bj3" kind="relationship" relationship="rootViewController" id="119-Gk-wH5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KE8-DN-jUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808.6956521739132" y="45.535714285714285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="feed_tab" width="25" height="25"/>
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_logo" width="255" height="108"/>
+        <image name="profile_tab" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

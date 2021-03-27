@@ -26,9 +26,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let main = UIStoryboard(name: "Main", bundle: nil)
             
             // Instantiate a new viewcontroller. We want to instantiate the navigation controller we named as FeedNavigationController
-            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavigationController")
+            let tabBarController = main.instantiateViewController(withIdentifier: "TabBarController")
             
-            window?.rootViewController = feedNavigationController
+            window?.rootViewController = tabBarController
             
 
             
