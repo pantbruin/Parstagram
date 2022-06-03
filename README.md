@@ -33,11 +33,12 @@ User can add a profile picture:
 <br/>
 <img src='http://g.recordit.co/tu2NzyGI6A.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-Here's a walkthrough of implemented user stories:
-
 App icon, styled launch screen, sign up and create new account
+<br/>
 <img src='http://g.recordit.co/AH4TE7VG15.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+
 Login, user can take photo, add caption, post to server, user can view last few posts
+<br/>
 <img src='http://g.recordit.co/cQ0v6E4xz0.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
